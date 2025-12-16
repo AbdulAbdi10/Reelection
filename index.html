@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Abdul Abdi for School Board | District 1</title>
+  <meta name="description" content="Re-elect Abdul Abdi for Minneapolis Public Schools Board, District 1." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="container topbar__inner">
+    <span>📍 Minneapolis Public Schools — District 1</span>
+    <div class="topbar__social">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter/X</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header">
+  <div class="container header__inner">
+    <div class="brand">
+      <div class="brand__mark">AA</div>
+      <div>
+        <div class="brand__name">Abdul Abdi</div>
+        <div class="brand__tag">Re-Elect • School Board • District 1</div>
+      </div>
+    </div>
+
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#priorities">Priorities</a>
+      <a href="#vision">Vision</a>
+      <a href="#contact" class="btn btn--primary">Get Involved</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero__grid">
+    <div>
+      <p class="eyebrow">Re-Election Campaign</p>
+      <h1>Putting Students First.  
+        <br />Strengthening Our Schools.</h1>
+
+      <p class="hero__lead">
+        I’m Abdul Abdi, and I’m running for re-election to continue serving
+        families, educators, and students in Minneapolis Public Schools
+        District 1 with integrity, accountability, and results.
+      </p>
+
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--primary">Join the Campaign</a>
+        <a href="#priorities" class="btn btn--ghost">My Priorities</a>
+      </div>
+    </div>
+
+    <div class="hero__media">
+      <img src="Abdul.Abdi.png" alt="Abdul Abdi" class="hero__photo" />
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section" id="about">
+  <div class="container section__grid">
+    <div>
+      <h2>About Abdul</h2>
+      <p>
+        Abdul Abdi is a parent, community advocate, and current Minneapolis
+        Public Schools Board Director representing District 1.
+        He brings deep experience in public service, finance, and community
+        leadership.
+      </p>
+
+      <ul class="bullets">
+        <li>Current MPS Board Director – District 1</li>
+        <li>Chair, Finance Committee</li>
+        <li>Parent and lifelong community advocate</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Why I’m Running Again</h3>
+      <p>
+        Our students deserve strong academic outcomes, stable leadership,
+        and culturally responsive schools. I’m running to continue this work
+        and ensure every student has access to opportunity.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Priorities -->
+<section class="section section--alt" id="priorities">
+  <div class="container">
+    <h2>My Priorities</h2>
+
+    <div class="grid4">
+      <div class="pcard">
+        <h3>📘 Academic Achievement</h3>
+        <p>Literacy, math, and measurable student outcomes.</p>
+      </div>
+
+      <div class="pcard">
+        <h3>🤝 Equity & Access</h3>
+        <p>Support for multilingual learners and underserved students.</p>
+      </div>
+
+      <div class="pcard">
+        <h3>🏫 Strong Schools</h3>
+        <p>Safe buildings, stable staffing, and community trust.</p>
+      </div>
+
+      <div class="pcard">
+        <h3>📊 Accountability</h3>
+        <p>Transparent budgeting and responsible stewardship.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vision -->
+<section class="section" id="vision">
+  <div class="container">
+    <h2>Vision for District 1</h2>
+    <p>
+      I believe in partnership with families, educators, and community
+      organizations to deliver results — not slogans.
+    </p>
+
+    <div class="callout">
+      <strong>
+        Strong schools are built through trust, accountability, and shared
+        responsibility.
+      </strong>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section section--alt" id="contact">
+  <div class="container">
+    <h2>Get Involved</h2>
+    <p>Volunteer, support, or reach out to the campaign.</p>
+
+    <form class="form"
+      action="https://formsubmit.co/info@abdulforschools.org"
+      method="POST">
+      <input type="hidden" name="_captcha" value="false">
+
+      <div class="form__row">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+      </div>
+
+      <textarea name="message" rows="5" placeholder="Message" required></textarea>
+
+      <button class="btn btn--primary" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container footer__legal">
+    <p>
+      Prepared and paid for by Abdul Abdi for School Board, District 1
+    </p>
+    <p>© <span id="year"></span> abdulforschools.org</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
