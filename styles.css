@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #0b1220;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.topbar {
+  background: #111827;
+  font-size: 14px;
+}
+
+.topbar__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.header {
+  background: #0b1220;
+  border-bottom: 1px solid #1f2937;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.brand__mark {
+  width: 44px;
+  height: 44px;
+  background: #2563eb;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-weight: 800;
+}
+
+.nav a {
+  margin-left: 20px;
+  font-weight: 600;
+}
+
+.hero {
+  padding: 60px 0;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero__photo {
+  width: 100%;
+  border-radius: 24px;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section--alt {
+  background: #111827;
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.pcard, .card {
+  background: #1f2937;
+  padding: 24px;
+  border-radius: 20px;
+}
+
+.bullets li {
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.btn--primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn--ghost {
+  border: 1px solid #374151;
+}
+
+.form input, .form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 12px;
+}
+
+.footer {
+  background: #020617;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 14px;
+}
