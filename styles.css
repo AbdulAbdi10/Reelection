@@ -97,6 +97,7 @@ body {
   text-decoration: underline;
 }
 
+/* ===== BUTTONS ===== */
 .btn {
   padding: 14px 24px;
   border-radius: 8px;
@@ -104,6 +105,16 @@ body {
   font-size: 1rem;
   text-decoration: none;
   display: inline-block;
+  line-height: 1.1;
+  transition: transform 0.05s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.95;
+}
+
+.btn:active {
+  transform: translateY(1px);
 }
 
 .btn--primary {
@@ -149,6 +160,13 @@ body {
   max-width: 640px;
 }
 
+.hero__cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
 .hero__photo {
   width: 100%;
   border-radius: 12px;
@@ -188,6 +206,11 @@ body {
   padding: 28px;
 }
 
+/* Donate page card readability (optional) */
+.card h3 {
+  margin-top: 0;
+}
+
 .grid4 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -219,7 +242,14 @@ body {
   font-weight: 700;
 }
 
-/* ===== FORM ===== */
+/* ===== GOOGLE FORM EMBED ===== */
+iframe {
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+/* ===== FORM (legacy — safe to keep) ===== */
 .form input,
 .form textarea {
   width: 100%;
@@ -252,5 +282,25 @@ body {
 
   .hero h1 {
     font-size: 2.4rem;
+  }
+}
+
+/* Better mobile nav + buttons */
+@media (max-width: 700px) {
+  .header__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .nav a {
+    margin-left: 0;
+    margin-right: 14px;
+    display: inline-block;
+    margin-top: 8px;
+  }
+
+  .btn {
+    width: auto;
   }
 }
