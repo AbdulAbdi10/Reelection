@@ -52,7 +52,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 0;
+  padding: 20px 0; /* slightly tighter */
 }
 
 .brand {
@@ -113,7 +113,7 @@ body {
 
 /* ===== BUTTONS ===== */
 .btn {
-  padding: 14px 24px;
+  padding: 13px 22px; /* slightly tighter */
   border-radius: 8px;
   font-weight: 700;
   font-size: 1rem;
@@ -143,14 +143,14 @@ body {
 
 /* ===== HERO ===== */
 .hero {
-  padding: 80px 0;
+  padding: 64px 0; /* was 80px */
   background: #ffffff;
 }
 
 .hero__grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px;
+  gap: 44px; /* slightly tighter */
   align-items: center;
 }
 
@@ -160,25 +160,27 @@ body {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin: 0 0 10px; /* reduce extra whitespace */
 }
 
 .hero h1 {
   font-size: 3rem;
   line-height: 1.15;
-  margin: 16px 0;
+  margin: 10px 0 14px; /* tighter */
 }
 
 .hero__lead {
   font-size: 1.2rem;
   color: #374151;
   max-width: 640px;
+  margin: 0; /* prevents big default margins */
 }
 
 .hero__cta {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  margin-top: 18px;
+  margin-top: 16px; /* slightly tighter */
 }
 
 .hero__photo {
@@ -188,27 +190,40 @@ body {
 
 /* ===== SECTIONS ===== */
 .section {
-  padding: 70px 0;
+  padding: 52px 0; /* was 70px */
 }
 
 .section--alt {
   background: #f9fafb;
 }
 
+.section h1 {
+  margin: 0 0 14px;
+}
+
 .section h2 {
   font-size: 2.2rem;
-  margin-bottom: 20px;
+  margin: 0 0 16px; /* was bottom 20 */
+}
+
+.section h3 {
+  margin: 0 0 12px;
 }
 
 .section p {
   font-size: 1.1rem;
   color: #374151;
+  margin: 0 0 14px; /* tighter + consistent */
+}
+
+.section p:last-child {
+  margin-bottom: 0;
 }
 
 .section__grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
+  gap: 34px; /* was 40 */
 }
 
 /* ===== CARDS ===== */
@@ -217,7 +232,7 @@ body {
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
-  padding: 28px;
+  padding: 24px; /* was 28 */
 }
 
 .card h3 {
@@ -227,30 +242,35 @@ body {
 .grid4 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 24px;
+  gap: 22px; /* slightly tighter */
 }
 
 .pcard h3 {
   font-size: 1.3rem;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 /* ===== LISTS ===== */
 .bullets {
   padding-left: 20px;
+  margin: 0;
 }
 
 .bullets li {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-size: 1.05rem;
+}
+
+.bullets li:last-child {
+  margin-bottom: 0;
 }
 
 /* ===== CALLOUT ===== */
 .callout {
   background: #eff6ff;
   border-left: 6px solid #1d4ed8;
-  padding: 24px;
-  margin-top: 32px;
+  padding: 22px; /* slightly tighter */
+  margin-top: 22px; /* tighter */
   font-size: 1.2rem;
   font-weight: 700;
 }
@@ -270,7 +290,7 @@ iframe {
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid #d1d5db;
-  margin-bottom: 16px;
+  margin-bottom: 14px; /* slightly tighter */
 }
 
 .form button {
@@ -281,7 +301,7 @@ iframe {
 .footer {
   background: #f3f4f6;
   border-top: 2px solid #e5e7eb;
-  padding: 32px 0;
+  padding: 28px 0; /* slightly tighter */
   font-size: 0.95rem;
   text-align: center;
 }
@@ -298,7 +318,7 @@ iframe {
   }
 }
 
-/* Better mobile nav + buttons */
+/* Better mobile nav + spacing */
 @media (max-width: 700px) {
   .header__inner {
     flex-direction: column;
@@ -311,6 +331,14 @@ iframe {
     margin-right: 14px;
     display: inline-block;
     margin-top: 8px;
+  }
+
+  .hero {
+    padding: 50px 0;
+  }
+
+  .section {
+    padding: 40px 0; /* tighter on mobile */
   }
 
   .btn {
