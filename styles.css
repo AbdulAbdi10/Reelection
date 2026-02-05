@@ -4,18 +4,19 @@
 }
 
 html {
-  font-size: 17px;
+  font-size: 18.5px; /* Bigger, more readable */
+  scroll-behavior: smooth; /* Smooth anchor scrolling */
 }
 
 body {
   margin: 0;
   font-family: "Inter", Arial, Helvetica, sans-serif;
-  background: #f1f5f9; /* light gray outer background */
+  background: #f1f5f9;
   color: #111827;
   line-height: 1.6;
 }
 
-/* ===== PAGE WRAPPER (BOX) ===== */
+/* ===== PAGE WRAPPER (BOXED LAYOUT) ===== */
 .page {
   max-width: 1200px;
   margin: 24px auto;
@@ -107,7 +108,7 @@ body {
   text-decoration: underline;
 }
 
-/* ===== BUTTONS (Unified Blue) ===== */
+/* ===== BUTTONS (UNIFIED BLUE) ===== */
 .btn {
   padding: 11px 20px;
   border-radius: 7px;
@@ -129,6 +130,13 @@ body {
 
 .btn:active {
   transform: translateY(0);
+}
+
+/* Disable ghost style */
+.btn--ghost {
+  background: #1d4ed8;
+  color: #ffffff !important;
+  border: none;
 }
 
 /* ===== HERO ===== */
@@ -204,7 +212,12 @@ body {
   gap: 26px;
 }
 
-/* ===== STACK (Button Rows) ===== */
+/* Fix anchor jump for Vision */
+#vision {
+  scroll-margin-top: 90px;
+}
+
+/* ===== STACK (BUTTON ROWS) ===== */
 .stack {
   margin-top: 10px;
   display: flex;
