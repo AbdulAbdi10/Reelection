@@ -52,7 +52,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0; /* slightly tighter */
+  padding: 20px 0; /* tighter */
 }
 
 .brand {
@@ -97,14 +97,14 @@ body {
   text-decoration: underline;
 }
 
-/* Force white text for primary button in nav */
+/* Ensure primary button in nav stays white */
 .nav a.btn.btn--primary,
 .nav a.btn--primary:link,
 .nav a.btn--primary:visited {
   color: #ffffff;
 }
 
-/* Keep ghost button color in nav */
+/* Keep ghost button color consistent in nav */
 .nav a.btn.btn--ghost,
 .nav a.btn--ghost:link,
 .nav a.btn--ghost:visited {
@@ -143,7 +143,7 @@ body {
 
 /* ===== HERO ===== */
 .hero {
-  padding: 64px 0; /* was 80px */
+  padding: 64px 0; /* tighter */
   background: #ffffff;
 }
 
@@ -160,7 +160,7 @@ body {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin: 0 0 10px; /* reduce extra whitespace */
+  margin: 0 0 10px; /* remove default p spacing */
 }
 
 .hero h1 {
@@ -190,7 +190,7 @@ body {
 
 /* ===== SECTIONS ===== */
 .section {
-  padding: 52px 0; /* was 70px */
+  padding: 52px 0; /* tighter */
 }
 
 .section--alt {
@@ -203,7 +203,7 @@ body {
 
 .section h2 {
   font-size: 2.2rem;
-  margin: 0 0 16px; /* was bottom 20 */
+  margin: 0 0 16px; /* tighter */
 }
 
 .section h3 {
@@ -213,7 +213,7 @@ body {
 .section p {
   font-size: 1.1rem;
   color: #374151;
-  margin: 0 0 14px; /* tighter + consistent */
+  margin: 0 0 14px; /* consistent + tighter */
 }
 
 .section p:last-child {
@@ -223,7 +223,7 @@ body {
 .section__grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 34px; /* was 40 */
+  gap: 34px; /* tighter */
 }
 
 /* ===== CARDS ===== */
@@ -232,7 +232,7 @@ body {
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 10px;
-  padding: 24px; /* was 28 */
+  padding: 24px; /* tighter */
 }
 
 .card h3 {
@@ -265,12 +265,25 @@ body {
   margin-bottom: 0;
 }
 
+/* Tighter bullets inside cards/sections when needed */
+.bullets--tight li {
+  margin-bottom: 8px;
+}
+
+/* ===== STACK (button rows) ===== */
+.stack {
+  margin-top: 12px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
 /* ===== CALLOUT ===== */
 .callout {
   background: #eff6ff;
   border-left: 6px solid #1d4ed8;
-  padding: 22px; /* slightly tighter */
-  margin-top: 22px; /* tighter */
+  padding: 22px;
+  margin-top: 22px;
   font-size: 1.2rem;
   font-weight: 700;
 }
@@ -290,7 +303,7 @@ iframe {
   font-size: 1rem;
   border-radius: 8px;
   border: 1px solid #d1d5db;
-  margin-bottom: 14px; /* slightly tighter */
+  margin-bottom: 14px; /* tighter */
 }
 
 .form button {
@@ -301,7 +314,7 @@ iframe {
 .footer {
   background: #f3f4f6;
   border-top: 2px solid #e5e7eb;
-  padding: 28px 0; /* slightly tighter */
+  padding: 28px 0; /* tighter */
   font-size: 0.95rem;
   text-align: center;
 }
