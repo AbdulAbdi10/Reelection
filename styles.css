@@ -65,7 +65,7 @@ body {
   width: 52px;
   height: 52px;
   background: #1d4ed8;
-  color: white;
+  color: #ffffff;
   font-weight: 800;
   font-size: 1.2rem;
   border-radius: 50%;
@@ -97,6 +97,20 @@ body {
   text-decoration: underline;
 }
 
+/* Force white text for primary button in nav */
+.nav a.btn.btn--primary,
+.nav a.btn--primary:link,
+.nav a.btn--primary:visited {
+  color: #ffffff;
+}
+
+/* Keep ghost button color in nav */
+.nav a.btn.btn--ghost,
+.nav a.btn--ghost:link,
+.nav a.btn--ghost:visited {
+  color: #1d4ed8;
+}
+
 /* ===== BUTTONS ===== */
 .btn {
   padding: 14px 24px;
@@ -119,7 +133,7 @@ body {
 
 .btn--primary {
   background: #1d4ed8;
-  color: white;
+  color: #ffffff;
 }
 
 .btn--ghost {
@@ -206,7 +220,6 @@ body {
   padding: 28px;
 }
 
-/* Donate page card readability (optional) */
 .card h3 {
   margin-top: 0;
 }
@@ -249,7 +262,7 @@ iframe {
   background: #ffffff;
 }
 
-/* ===== FORM (legacy — safe to keep) ===== */
+/* ===== FORM ===== */
 .form input,
 .form textarea {
   width: 100%;
