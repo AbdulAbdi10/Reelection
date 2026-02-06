@@ -3,86 +3,94 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Get Involved | Abdul Abdi for School Board</title>
   <meta name="description" content="Volunteer, support, and stay connected with Abdul Abdi’s re-election campaign." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body id="top">
+<div class="page">
 
-<!-- Top Bar -->
-<div class="topbar">
-  <div class="container topbar__inner">
-    <span>📍 Minneapolis Public Schools — District 1</span>
-    <div class="topbar__social">
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-      <a href="#">Twitter/X</a>
-    </div>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="header">
-  <div class="container header__inner">
-    <div class="brand">
-      <div class="brand__mark">AA</div>
+  <!-- ================= TOP BAR ================= -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>📍 Minneapolis Public Schools — District 1</span>
       <div>
-        <div class="brand__name">Abdul Abdi</div>
-        <div class="brand__tag">Re-Elect • School Board • District 1</div>
+        <a href="https://x.com/RealAbdulAbdi">Twitter/X</a>
       </div>
     </div>
-
-    <nav class="nav">
-      <a href="index.html#about">About</a>
-      <a href="index.html#vision">Vision</a>
-      <a href="endorsements.html">Endorsements</a>
-      <a href="get-involved.html" class="btn btn--primary">Get Involved</a>
-      <a href="donate.html" class="btn btn--ghost">Donate</a>
-    </nav>
   </div>
-</header>
 
-<!-- Get Involved -->
-<section class="section section--alt">
-  <div class="container">
-    <h2>Get Involved</h2>
-    <p>Volunteer, support, and stay connected with Abdul for Schools.</p>
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header__inner">
 
-    <div style="max-width: 900px; margin: 22px auto 0;">
-      <iframe
-        src="https://forms.gle/hqmAxgoGfL15JAiPA"
-        width="100%"
-        height="2500"
-        frameborder="0"
-        marginheight="0"
-        marginwidth="0">
-        Loading…
-      </iframe>
+      <div class="brand">
+        <div class="brand__mark">AA</div>
+        <div>
+          <div class="brand__name">Abdul Abdi</div>
+          <div class="brand__tag">Re-Elect • School Board • District 1</div>
+        </div>
+      </div>
+
+      <!-- IMPORTANT: nav--buttons makes mobile nav a neat grid -->
+      <nav class="nav nav--buttons" aria-label="Primary">
+        <a href="index.html#top" class="btn">Home</a>
+        <!-- <a href="about.html" class="btn">About</a> -->
+        <!-- <a href="index.html#vision" class="btn">Vision</a> -->
+        <!-- <a href="endorsements.html" class="btn">Endorsements</a> -->
+        <a href="donate.html" class="btn">Donate</a>
+      </nav>
+
     </div>
+  </header>
 
-    <p style="margin-top: 18px;">
-      <a href="index.html" class="btn btn--ghost">Back to Home</a>
-    </p>
-  </div>
-</section>
+  <!-- ================= GET INVOLVED ================= -->
+  <section class="section">
+    <div class="container">
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container footer__legal">
-    <p>
-      Prepared and paid for by Abdul Abdi for School Board, District 1
-    </p>
-    <p>© <span id="year"></span> abdulforschools.org</p>
-  </div>
-</footer>
+      <h1>Get Involved</h1>
+      <p>Volunteer, support, and stay connected with Abdul for Schools.</p>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+      <div class="form-embed">
+        <iframe
+          title="Get Involved Form"
+          src="https://forms.gle/hqmAxgoGfL15JAiPA"
+          width="100%"
+          height="1800"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0">
+          Loading…
+        </iframe>
+      </div>
 
+      <div class="stack stack--room">
+        <a href="index.html#top" class="btn">Home</a>
+        <a href="donate.html" class="btn">Donate</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <p>Prepared and paid for by Abdul Abdi for School Board, District 1</p>
+      <p>© <span id="year"></span> abdulforschools.org</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</div>
 </body>
 </html>
