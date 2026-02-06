@@ -1,11 +1,9 @@
 /* ===== GLOBAL RESET ===== */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html {
-  font-size: 18.5px; /* Bigger, more readable */
-  scroll-behavior: smooth; /* Smooth anchor scrolling */
+  font-size: 18.5px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -45,6 +43,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 8px 0;
+  gap: 12px;
 }
 
 .topbar a {
@@ -64,12 +63,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
+  gap: 16px;
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: 12px;
+  min-width: 240px;
 }
 
 .brand__mark {
@@ -95,19 +96,6 @@ body {
   color: #374151;
 }
 
-/* ===== NAV ===== */
-.nav a {
-  margin-left: 20px;
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #111827;
-  text-decoration: none;
-}
-
-.nav a:hover {
-  text-decoration: underline;
-}
-
 /* ===== BUTTONS (UNIFIED BLUE) ===== */
 .btn {
   padding: 11px 20px;
@@ -115,12 +103,15 @@ body {
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   line-height: 1.1;
   background: #1d4ed8;
   color: #ffffff !important;
   border: none;
   transition: all 0.15s ease;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -128,15 +119,20 @@ body {
   transform: translateY(-1px);
 }
 
-.btn:active {
-  transform: translateY(0);
+.btn:active { transform: translateY(0); }
+
+/* ===== NAV ===== */
+.nav { display: flex; align-items: center; }
+
+.nav--buttons {
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
-/* Disable ghost style */
-.btn--ghost {
-  background: #1d4ed8;
-  color: #ffffff !important;
-  border: none;
+.nav--buttons .btn {
+  padding: 10px 16px; /* slightly smaller in nav */
+  font-size: 0.92rem;
 }
 
 /* ===== HERO ===== */
@@ -184,20 +180,15 @@ body {
 .hero__photo {
   width: 100%;
   border-radius: 10px;
+  display: block;
 }
 
 /* ===== SECTIONS ===== */
-.section {
-  padding: 38px 0;
-}
+.section { padding: 38px 0; }
 
 .section h2 {
   font-size: 1.9rem;
   margin: 0 0 12px;
-}
-
-.section h3 {
-  margin: 0 0 8px;
 }
 
 .section p {
@@ -213,9 +204,7 @@ body {
 }
 
 /* Fix anchor jump for Vision */
-#vision {
-  scroll-margin-top: 90px;
-}
+#vision { scroll-margin-top: 90px; }
 
 /* ===== STACK (BUTTON ROWS) ===== */
 .stack {
@@ -224,6 +213,9 @@ body {
   gap: 10px;
   flex-wrap: wrap;
 }
+
+.stack--wide { gap: 12px; }
+.stack--room { margin-top: 14px; }
 
 /* ===== CARDS ===== */
 .card {
@@ -255,22 +247,19 @@ body {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-
   .hero__grid,
   .section__grid {
     grid-template-columns: 1fr;
   }
 
-  .hero h1 {
-    font-size: 2.1rem;
-  }
+  .hero h1 { font-size: 2.1rem; }
+
+  .nav--buttons { justify-content: flex-start; }
 }
 
+/* Mobile polish */
 @media (max-width: 700px) {
-
-  body {
-    background: #ffffff;
-  }
+  body { background: #ffffff; }
 
   .page {
     margin: 0;
@@ -278,24 +267,52 @@ body {
     box-shadow: none;
   }
 
+  .container { padding: 0 16px; }
+
+  /* Topbar stacks nicely */
+  .topbar__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
+  }
+
+  /* Header stacks and nav becomes a neat grid */
   .header__inner {
     flex-direction: column;
     align-items: flex-start;
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .brand { min-width: 0; }
+
+  .nav--buttons {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* clean 2-column buttons */
     gap: 10px;
   }
 
-  .nav a {
-    margin-left: 0;
-    margin-right: 12px;
-    margin-top: 6px;
-    display: inline-block;
+  .nav--buttons .btn {
+    width: 100%;
+    padding: 12px 12px;
+    font-size: 0.95rem;
   }
 
-  .hero {
-    padding: 34px 0;
+  /* Make hero CTAs full width on mobile for easy tapping */
+  .hero__cta,
+  .stack {
+    gap: 10px;
   }
 
-  .section {
-    padding: 30px 0;
+  .hero__cta .btn,
+  .stack .btn {
+    width: 100%;
   }
+
+  /* Hero spacing */
+  .hero { padding: 32px 0; }
+  .section { padding: 28px 0; }
+
+  .hero h1 { font-size: 2rem; }
 }
