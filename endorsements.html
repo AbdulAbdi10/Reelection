@@ -3,104 +3,116 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Endorsements | Abdul Abdi for School Board</title>
   <meta name="description" content="Endorsements for Abdul Abdi’s re-election campaign for School Board District 1." />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body id="top">
+<div class="page">
 
-<!-- Top Bar -->
-<div class="topbar">
-  <div class="container topbar__inner">
-    <span>📍 Minneapolis Public Schools — District 1</span>
-    <div class="topbar__social">
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-      <a href="#">Twitter/X</a>
-    </div>
-  </div>
-</div>
-
-<!-- Header -->
-<header class="header">
-  <div class="container header__inner">
-    <div class="brand">
-      <div class="brand__mark">AA</div>
+  <!-- ================= TOP BAR ================= -->
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <span>📍 Minneapolis Public Schools — District 1</span>
       <div>
-        <div class="brand__name">Abdul Abdi</div>
-        <div class="brand__tag">Re-Elect • School Board • District 1</div>
+        <a href="https://x.com/RealAbdulAbdi">Twitter/X</a>
       </div>
     </div>
-
-    <nav class="nav">
-      <a href="index.html#about">About</a>
-      <a href="index.html#vision">Vision</a>
-      <a href="endorsements.html">Endorsements</a>
-      <a href="get-involved.html" class="btn btn--primary">Get Involved</a>
-      <a href="donate.html" class="btn btn--ghost">Donate</a>
-    </nav>
   </div>
-</header>
 
-<!-- Endorsements -->
-<section class="section">
-  <div class="container">
-    <h2>Endorsements</h2>
-    <p>
-      I’m grateful for the support of community members, educators, and leaders who believe in strong public schools and a brighter future for our students.
-      More endorsements will be added here.
-    </p>
+  <!-- ================= HEADER ================= -->
+  <header class="header">
+    <div class="container header__inner">
 
-    <div class="grid4" style="margin-top: 24px;">
-      <div class="card">
-        <h3>Endorser Name</h3>
-        <p>Title / Organization</p>
-        <p>Short quote or reason for endorsement (optional).</p>
+      <div class="brand">
+        <div class="brand__mark">AA</div>
+        <div>
+          <div class="brand__name">Abdul Abdi</div>
+          <div class="brand__tag">Re-Elect • School Board • District 1</div>
+        </div>
       </div>
 
-      <div class="card">
-        <h3>Endorser Name</h3>
-        <p>Title / Organization</p>
-        <p>Short quote or reason for endorsement (optional).</p>
-      </div>
+      <!-- IMPORTANT: nav--buttons gives mobile grid buttons -->
+      <nav class="nav nav--buttons" aria-label="Primary">
+        <a href="index.html#top" class="btn">Home</a>
+        <a href="about.html" class="btn">About</a>
+        <a href="index.html#vision" class="btn">Vision</a>
+        <a href="endorsements.html" class="btn">Endorsements</a>
+        <a href="donate.html" class="btn">Donate</a>
+      </nav>
 
-      <div class="card">
-        <h3>Endorser Name</h3>
-        <p>Title / Organization</p>
-        <p>Short quote or reason for endorsement (optional).</p>
-      </div>
-
-      <div class="card">
-        <h3>Endorser Name</h3>
-        <p>Title / Organization</p>
-        <p>Short quote or reason for endorsement (optional).</p>
-      </div>
     </div>
+  </header>
 
-    <p style="margin-top: 22px;">
-      <a href="index.html" class="btn btn--ghost">Back to Home</a>
-      <a href="get-involved.html" class="btn btn--primary">Volunteer / Support</a>
-    </p>
-  </div>
-</section>
+  <!-- ================= ENDORSEMENTS ================= -->
+  <section class="section">
+    <div class="container">
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container footer__legal">
-    <p>
-      Prepared and paid for by Abdul Abdi for School Board, District 1
-    </p>
-    <p>© <span id="year"></span> abdulforschools.org</p>
-  </div>
-</footer>
+      <h1>Endorsements</h1>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+      <p>
+        I’m grateful for the support of community members, educators, and leaders who believe in strong public schools and a brighter future for our students.
+        More endorsements will be added here.
+      </p>
 
+      <!-- Responsive grid of cards -->
+      <div class="grid4 stack--room">
+
+        <div class="card">
+          <h3>Endorser Name</h3>
+          <p>Title / Organization</p>
+          <p>Short quote or reason for endorsement (optional).</p>
+        </div>
+
+        <div class="card">
+          <h3>Endorser Name</h3>
+          <p>Title / Organization</p>
+          <p>Short quote or reason for endorsement (optional).</p>
+        </div>
+
+        <div class="card">
+          <h3>Endorser Name</h3>
+          <p>Title / Organization</p>
+          <p>Short quote or reason for endorsement (optional).</p>
+        </div>
+
+        <div class="card">
+          <h3>Endorser Name</h3>
+          <p>Title / Organization</p>
+          <p>Short quote or reason for endorsement (optional).</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom buttons -->
+      <div class="stack stack--room">
+        <a href="index.html#top" class="btn">Home</a>
+        <a href="get-involved.html" class="btn">Get Involved</a>
+        <a href="donate.html" class="btn">Donate</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <p>Prepared and paid for by Abdul Abdi for School Board, District 1</p>
+      <p>© <span id="year"></span> abdulforschools.org</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</div>
 </body>
 </html>
