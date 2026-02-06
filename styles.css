@@ -124,6 +124,7 @@ body {
 /* ===== NAV ===== */
 .nav { display: flex; align-items: center; }
 
+/* Use this class on index/about nav: class="nav nav--buttons" */
 .nav--buttons {
   gap: 10px;
   flex-wrap: wrap;
@@ -131,7 +132,7 @@ body {
 }
 
 .nav--buttons .btn {
-  padding: 10px 16px; /* slightly smaller in nav */
+  padding: 10px 16px;
   font-size: 0.92rem;
 }
 
@@ -186,9 +187,17 @@ body {
 /* ===== SECTIONS ===== */
 .section { padding: 38px 0; }
 
+.section h1 {
+  margin: 0 0 10px;
+}
+
 .section h2 {
   font-size: 1.9rem;
   margin: 0 0 12px;
+}
+
+.section h3 {
+  margin: 0 0 8px;
 }
 
 .section p {
@@ -286,11 +295,13 @@ body {
 
   .brand { min-width: 0; }
 
+  /* NAV: 2-column grid buttons */
   .nav--buttons {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* clean 2-column buttons */
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
+    justify-content: initial;
   }
 
   .nav--buttons .btn {
@@ -299,20 +310,42 @@ body {
     font-size: 0.95rem;
   }
 
-  /* Make hero CTAs full width on mobile for easy tapping */
-  .hero__cta,
-  .stack {
+  /* HERO: comfortable stacking + readable type */
+  .hero { padding: 32px 0; }
+  .hero h1 { font-size: 2rem; }
+
+  /* CTAs: 2-column (instead of overly tall full-width stack) */
+  .hero__cta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
+  .hero__cta .btn { width: 100%; }
 
-  .hero__cta .btn,
-  .stack .btn {
-    width: 100%;
-  }
-
-  /* Hero spacing */
-  .hero { padding: 32px 0; }
+  /* Sections */
   .section { padding: 28px 0; }
 
-  .hero h1 { font-size: 2rem; }
+  /* STACKS: make bottom button rows 2-column on mobile */
+  .stack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .stack .btn { width: 100%; }
+
+  /* If a stack has 3 buttons, let the last one span full width */
+  .stack .btn:last-child:nth-child(3) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Extra-small phones: single-column buttons for comfort */
+@media (max-width: 420px) {
+  .nav--buttons,
+  .hero__cta,
+  .stack {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 { font-size: 1.85rem; }
 }
