@@ -7,10 +7,12 @@
   <title>Abdul Abdi for School Board | District 1</title>
   <meta name="description" content="Re-elect Abdul Abdi for Minneapolis Public Schools Board, District 1." />
 
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -31,18 +33,10 @@
   <header class="header">
     <div class="container header__inner">
 
-      <!-- Nav on the left -->
-      <nav class="nav nav--buttons" aria-label="Primary">
-        <a href="#top" class="btn">Home</a>
-        <a href="#vision" class="btn">Vision</a>
-        <a href="endorsements.html" class="btn">Endorsements</a>
-        <a href="donate.html" class="btn">Donate</a>
-      </nav>
-
-      <!-- Logo on the right (replaces AA / Abdul Abdi) -->
+      <!-- Logo (LEFT) -->
       <div class="brand brand--logo">
         <a href="#top" class="logo-link" aria-label="Back to Home">
-          <!-- CHANGE logo.png to your real file name -->
+          <!-- Change filename if needed -->
           <img
             src="AbdulAbdiLogo.png"
             alt="Abdul Abdi for School Board"
@@ -53,6 +47,14 @@
         </a>
       </div>
 
+      <!-- Navigation (RIGHT) -->
+      <nav class="nav nav--buttons" aria-label="Primary">
+        <a href="#top" class="btn">Home</a>
+        <a href="#vision" class="btn">Vision</a>
+        <a href="endorsements.html" class="btn">Endorsements</a>
+        <a href="donate.html" class="btn">Donate</a>
+      </nav>
+
     </div>
   </header>
 
@@ -60,6 +62,7 @@
   <section class="hero">
     <div class="container hero__grid">
 
+      <!-- Left Content -->
       <div>
         <p class="eyebrow">Re-Election Campaign</p>
 
@@ -80,6 +83,7 @@
         </div>
       </div>
 
+      <!-- Right Image -->
       <div>
         <img src="abdulabdi.jpeg" alt="Abdul Abdi" class="hero__photo" />
       </div>
@@ -91,6 +95,7 @@
   <section class="section" id="about-preview">
     <div class="container section__grid">
 
+      <!-- About -->
       <div>
         <h2>Meet Abdul</h2>
 
@@ -106,6 +111,7 @@
         </div>
       </div>
 
+      <!-- Priorities -->
       <div class="card">
         <h2>Priorities</h2>
 
@@ -153,7 +159,8 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
 
 </div>
