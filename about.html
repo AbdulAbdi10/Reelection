@@ -25,7 +25,6 @@
     <div class="container topbar__inner">
       <span>📍 Minneapolis Public Schools — District 1</span>
       <div>
-        <!-- Keep or remove as you like -->
         <a href="https://x.com/RealAbdulAbdi">Twitter/X</a>
       </div>
     </div>
@@ -35,21 +34,25 @@
   <header class="header">
     <div class="container header__inner">
 
-      <div class="brand">
-        <div class="brand__mark">AA</div>
-        <div>
-          <div class="brand__name">Abdul Abdi</div>
-          <div class="brand__tag">Re-Elect • School Board • District 1</div>
-        </div>
+      <!-- Logo (LEFT) -->
+      <div class="brand brand--logo">
+        <a href="index.html#top" class="logo-link" aria-label="Back to Home">
+          <img
+            src="AbdulAbdiLogo.png"
+            alt="Abdul Abdi for School Board"
+            class="site-logo"
+            width="200"
+            height="103"
+          />
+        </a>
       </div>
 
-    <!--   IMPORTANT: use nav--buttons so mobile grid rules apply -->
+      <!-- Navigation (RIGHT) -->
       <nav class="nav nav--buttons" aria-label="Primary">
         <a href="index.html#top" class="btn">Home</a>
-       <!--  <a href="about.html" class="btn">About</a> -->
-       <!--  <a href="index.html#vision" class="btn">Vision</a> -->
-      <!--   <a href="endorsements.html" class="btn">Endorsements</a> -->
-      <!--  <a href="donate.html" class="btn">Donate</a> -->
+        <a href="endorsements.html" class="btn">Endorsements</a>
+        <a href="get-involved.html" class="btn">Get Involved</a>
+        <a href="donate.html" class="btn">Donate</a>
       </nav>
 
     </div>
@@ -110,7 +113,7 @@
     </div>
   </section>
 
-  <!-- ================= BOTTOM BUTTONS ONLY ================= -->
+  <!-- ================= BOTTOM BUTTONS ================= -->
   <section class="section">
     <div class="container">
       <div class="stack stack--room">
@@ -130,7 +133,8 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
 
 </div>
