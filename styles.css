@@ -66,6 +66,7 @@ body {
   gap: 16px;
 }
 
+/* Default brand (old AA text mark) — safe to keep */
 .brand {
   display: flex;
   align-items: center;
@@ -96,6 +97,26 @@ body {
   color: #374151;
 }
 
+/* ===== LOGO BRAND (NEW) ===== */
+.brand--logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-width: 0;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.site-logo {
+  max-width: 200px;   /* desired width */
+  height: auto;       /* keeps aspect ratio */
+  display: block;
+}
+
 /* ===== BUTTONS (UNIFIED BLUE) ===== */
 .btn {
   padding: 11px 20px;
@@ -124,7 +145,7 @@ body {
 /* ===== NAV ===== */
 .nav { display: flex; align-items: center; }
 
-/* Use this class on index/about nav: class="nav nav--buttons" */
+/* Use this class on index/about/etc nav: class="nav nav--buttons" */
 .nav--buttons {
   gap: 10px;
   flex-wrap: wrap;
@@ -245,6 +266,29 @@ body {
   font-size: 1rem;
 }
 
+/* ===== GRID (Endorsements cards) ===== */
+.grid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 14px;
+}
+
+/* ===== FORM EMBED (Google Form) ===== */
+.form-embed {
+  margin-top: 14px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.form-embed iframe {
+  width: 100%;
+  border: 0;
+  display: block;
+  background: #ffffff;
+}
+
 /* ===== FOOTER ===== */
 .footer {
   background: #f8fafc;
@@ -264,6 +308,9 @@ body {
   .hero h1 { font-size: 2.1rem; }
 
   .nav--buttons { justify-content: flex-start; }
+
+  /* Endorsements: 2 columns on tablet */
+  .grid4 { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Mobile polish */
@@ -295,6 +342,9 @@ body {
 
   .brand { min-width: 0; }
 
+  /* Logo scales down on mobile */
+  .site-logo { max-width: 150px; }
+
   /* NAV: 2-column grid buttons */
   .nav--buttons {
     width: 100%;
@@ -314,7 +364,7 @@ body {
   .hero { padding: 32px 0; }
   .hero h1 { font-size: 2rem; }
 
-  /* CTAs: 2-column (instead of overly tall full-width stack) */
+  /* CTAs: 2-column */
   .hero__cta {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -325,7 +375,7 @@ body {
   /* Sections */
   .section { padding: 28px 0; }
 
-  /* STACKS: make bottom button rows 2-column on mobile */
+  /* STACKS: make button rows 2-column on mobile */
   .stack {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -337,6 +387,12 @@ body {
   .stack .btn:last-child:nth-child(3) {
     grid-column: 1 / -1;
   }
+
+  /* Endorsements: 1 column on mobile */
+  .grid4 { grid-template-columns: 1fr; }
+
+  /* Form height on mobile (Google Form needs more vertical room) */
+  .form-embed iframe { height: 2200px; }
 }
 
 /* Extra-small phones: single-column buttons for comfort */
@@ -348,4 +404,7 @@ body {
   }
 
   .hero h1 { font-size: 1.85rem; }
+
+  /* Slightly smaller logo on tiny screens */
+  .site-logo { max-width: 135px; }
 }
