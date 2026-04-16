@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Endorsements | Abdul Abdi for School Board</title>
-  <meta name="description" content="Endorsements for Abdul Abdi’s re-election campaign for School Board District 1." />
+  <meta name="description" content="Endorsements for Abdul Abdi for Minneapolis Public Schools Board, District 1." />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +14,191 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* ================= ENDORSEMENTS PAGE ONLY ================= */
+    .endorsements-main {
+      background: #f8fafc;
+      padding: 56px 0 80px;
+    }
+
+    .endorsements-intro {
+      max-width: 820px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .endorsements-intro h1 {
+      margin: 0 0 14px;
+      font-size: 2.9rem;
+      line-height: 1.08;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.03em;
+    }
+
+    .endorsements-intro p {
+      margin: 0;
+      font-size: 1.08rem;
+      line-height: 1.75;
+      color: #475569;
+    }
+
+    .endorsement-section {
+      margin-bottom: 64px;
+    }
+
+    .endorsement-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .endorsement-section__header {
+      margin-bottom: 22px;
+    }
+
+    .endorsement-section__header h2 {
+      margin: 0 0 8px;
+      font-size: 1.7rem;
+      line-height: 1.2;
+      font-weight: 800;
+      color: #0f172a;
+    }
+
+    .endorsement-section__header p {
+      margin: 0;
+      color: #64748b;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .endorsement-divider {
+      height: 1px;
+      background: linear-gradient(to right, #cbd5e1, #e2e8f0, transparent);
+      margin-bottom: 26px;
+    }
+
+    .endorsement-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .endorsement-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 22px 16px;
+      text-align: center;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .endorsement-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 34px rgba(15, 23, 42, 0.08);
+      border-color: #cbd5e1;
+    }
+
+    .endorsement-photo {
+      width: 86px;
+      height: 86px;
+      object-fit: cover;
+      border-radius: 999px;
+      display: block;
+      margin: 0 auto 14px;
+      border: 3px solid #e2e8f0;
+      background: #fff;
+    }
+
+    .endorsement-name {
+      margin: 0 0 6px;
+      font-size: 1rem;
+      line-height: 1.35;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .endorsement-title {
+      margin: 0;
+      font-size: 0.94rem;
+      line-height: 1.55;
+      color: #475569;
+    }
+
+    .org-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .org-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 22px 18px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .org-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+    }
+
+    .org-logo {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 14px;
+      border-radius: 16px;
+      border: 1px solid #dbeafe;
+      background: #eff6ff;
+      color: #0a66c2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+    }
+
+    .org-name {
+      margin: 0 0 6px;
+      font-size: 1rem;
+      line-height: 1.4;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .org-type {
+      margin: 0;
+      font-size: 0.94rem;
+      line-height: 1.5;
+      color: #64748b;
+    }
+
+    @media (max-width: 1100px) {
+      .endorsement-grid,
+      .org-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .endorsements-main {
+        padding: 42px 0 64px;
+      }
+
+      .endorsements-intro h1 {
+        font-size: 2.2rem;
+      }
+
+      .endorsement-grid,
+      .org-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body id="top">
@@ -33,98 +218,164 @@
   <header class="header">
     <div class="container header__inner">
 
+      <!-- Logo (LEFT) -->
       <div class="brand brand--logo">
-        <a href="index.html#top" class="logo-link">
-          <img src="AbdulAbdiLogo.png" alt="Abdul Abdi for School Board" class="site-logo" width="200" />
+        <a href="index.html" class="logo-link" aria-label="Back to Home">
+          <img
+            src="AbdulAbdiLogo.png"
+            alt="Abdul Abdi for School Board"
+            class="site-logo"
+            width="200"
+            height="103"
+          />
         </a>
       </div>
 
-      <nav class="nav nav--buttons">
-        <a href="index.html#top" class="btn">Home</a>
+      <!-- Navigation (RIGHT) -->
+      <nav class="nav nav--buttons" aria-label="Primary">
+        <a href="index.html" class="btn">Home</a>
         <a href="get-involved.html" class="btn">Get Involved</a>
-        <a href="donate.html" class="btn">Donate</a>
+        <a href="endorsements.html" class="btn">Endorsements</a>
       </nav>
 
     </div>
   </header>
 
-  <!-- ================= ENDORSEMENTS ================= -->
-  <section class="section">
+  <!-- ================= MODERN CONTENT STARTS BELOW HEADER ================= -->
+  <main class="endorsements-main">
     <div class="container">
 
-      <h1>Endorsements</h1>
+      <section class="endorsements-intro">
+        <h1>Endorsements</h1>
+        <p>
+          Abdul Abdi is proud to have the support of elected leaders, community voices,
+          and organizations who believe in strong public schools, student success,
+          and accountable leadership for District 1.
+        </p>
+      </section>
 
-      <p>
-        I’m grateful for the support of community members, educators, and elected leaders
-        who believe in strong public schools and a brighter future for our students.
-      </p>
-
-      <!-- ================= ELECTED OFFICIALS ================= -->
-      <h2>Elected Officials</h2>
-
-      <div class="grid4 stack--room">
-
-        <div class="card">
-          <h4>Senator Doron Clark</h4>
-          <img src="DoronClark.png" alt="Senator Doron Clark" width="300" />
+      <!-- Elected Officials -->
+      <section class="endorsement-section" aria-labelledby="elected-officials-heading">
+        <div class="endorsement-section__header">
+          <h2 id="elected-officials-heading">Elected Officials</h2>
+          <p>Support from public leaders and elected representatives.</p>
         </div>
 
-        <div class="card">
-          <h4>Council Member Elliott Payne</h4>
-          <img src="Payne.jpg" alt="Elliott Payne" width="300" />
+        <div class="endorsement-divider"></div>
+
+        <div class="endorsement-grid">
+          <article class="endorsement-card">
+            <img src="SenatorDoronClark.png" alt="Name of endorser" class="endorsement-photo" />
+            <h3 class="endorsement-name">Senator Doron</h3>
+            <p class="endorsement-title"> State Senator </p>
+          </article>
+
+          <article class="endorsement-card">
+            <img src="Payne.jpg" alt="Name of endorser" class="endorsement-photo" />
+            <h3 class="endorsement-name">Council Payne</h3>
+            <p class="endorsement-title">City Council Member</p>
+          </article>
+
+          <article class="endorsement-card">
+            <img src="Jordan.png" alt="Name of endorser" class="endorsement-photo" />
+            <h3 class="endorsement-name">Sydney Jordan</h3>
+            <p class="endorsement-title">State Representative</p>
+          </article>
+
+         <article class="endorsement-card">
+            <img src="endorser-3.jpg" alt="Name of endorser" class="endorsement-photo" />
+            <h3 class="endorsement-name">Name of Endorser</h3>
+            <p class="endorsement-title">Park Board Commissioner</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Community Endorsements -->
+      <section class="endorsement-section" aria-labelledby="community-endorsements-heading">
+        <div class="endorsement-section__header">
+          <h2 id="community-endorsements-heading">Community Endorsements</h2>
+          <p>Support from respected community leaders, neighborhood advocates, and partners.</p>
         </div>
 
-        <div class="card">
-          <h4>Rep. Sydney Jordan</h4>
-          <img src="Jordan.png" alt="Sydney Jordan" width="300" />
+        <div class="endorsement-divider"></div>
+
+        <div class="endorsement-grid">
+          <article class="endorsement-card">
+            <img src="community-1.jpg" alt="Community leader" class="endorsement-photo" />
+            <h3 class="endorsement-name">Community Leader Name</h3>
+            <p class="endorsement-title">Parent and Community Advocate</p>
+          </article>
+
+          <article class="endorsement-card">
+            <img src="community-2.jpg" alt="Community leader" class="endorsement-photo" />
+            <h3 class="endorsement-name">Community Leader Name</h3>
+            <p class="endorsement-title">Neighborhood Leader</p>
+          </article>
+
+          <article class="endorsement-card">
+            <img src="community-3.jpg" alt="Community leader" class="endorsement-photo" />
+            <h3 class="endorsement-name">Community Leader Name</h3>
+            <p class="endorsement-title">Education Advocate</p>
+          </article>
+
+          <article class="endorsement-card">
+            <img src="community-4.jpg" alt="Community leader" class="endorsement-photo" />
+            <h3 class="endorsement-name">Community Leader Name</h3>
+            <p class="endorsement-title">Community Partner</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Organizations -->
+      <section class="endorsement-section" aria-labelledby="organizations-heading">
+        <div class="endorsement-section__header">
+          <h2 id="organizations-heading">Organizations & Community Partners</h2>
+          <p>Support from organizations and civic groups committed to stronger schools and stronger communities.</p>
         </div>
 
-      </div>
+        <div class="endorsement-divider"></div>
 
-      <!-- ================= COMMUNITY ORGANIZATIONS ================= -->
-      <h2>Community Organizations</h2>
+        <div class="org-grid">
+          <article class="org-card">
+            <div class="org-logo">ORG</div>
+            <h3 class="org-name">Organization Name</h3>
+            <p class="org-type">Community Organization</p>
+          </article>
 
-      <div class="grid3 stack--room">
-        <div>Minneapolis Federation of Educators (MFE)</div>
-        <div>Minneapolis Regional Labor Federation</div>
-        <div>Education Minnesota</div>
-        <div>Local Community Advocacy Groups</div>
-        <div>Neighborhood Associations</div>
-        <div>Youth Development Organizations</div>
-      </div>
+          <article class="org-card">
+            <div class="org-logo">LAB</div>
+            <h3 class="org-name">Organization Name</h3>
+            <p class="org-type">Labor Endorsement</p>
+          </article>
 
-      <!-- ================= COMMUNITY LEADERS ================= -->
-      <h2>Community Leaders</h2>
+          <article class="org-card">
+            <div class="org-logo">EDU</div>
+            <h3 class="org-name">Organization Name</h3>
+            <p class="org-type">Education Partner</p>
+          </article>
 
-      <div class="grid3 stack--room">
-        <div>Community Leader Name</div>
-        <div>Education Advocate</div>
-        <div>Parent Leader</div>
-        <div>Neighborhood Organizer</div>
-        <div>Faith Leader</div>
-        <div>Local Business Leader</div>
-      </div>
-
-      <!-- ================= BUTTONS ================= -->
-      <div class="stack stack--room">
-        <a href="index.html#top" class="btn">Home</a>
-        <a href="get-involved.html" class="btn">Get Involved</a>
-        <a href="donate.html" class="btn">Donate</a>
-      </div>
+          <article class="org-card">
+            <div class="org-logo">COM</div>
+            <h3 class="org-name">Organization Name</h3>
+            <p class="org-type">Community Partner</p>
+          </article>
+        </div>
+      </section>
 
     </div>
-  </section>
+  </main>
 
   <!-- ================= FOOTER ================= -->
   <footer class="footer">
     <div class="container">
-      <p>Prepared and paid for by Friends of Abdul Abdi</p>
+      <p>Prepared and paid for by Abdul Abdi for School Board, District 1</p>
       <p>© <span id="year"></span> abdulforschools.org</p>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
   </script>
 
 </div>
